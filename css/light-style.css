@@ -1,0 +1,434 @@
+body {
+    margin: 0;
+    color: #333;
+    font-family: 'Source Code Pro', monospace;
+
+    transition: 1s;
+}
+
+*,
+*:before,
+*::after{
+    box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+}
+
+/*Container*/
+.container{
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/*Intro*/
+.intro{
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    background-color: #fff;
+
+    transition: 1s;
+}
+
+.intro__inner{
+    width: 100%;
+    max-width: 880px;
+    margin: 0 auto;
+}
+
+.intro__title{
+
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1;
+    text-align: left;
+
+    color: #77A6F7;
+}
+
+
+
+.intro__suptitle{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 65px;
+    font-weight: 700;
+    text-align: left;
+    padding: 5px 0 0;
+
+    color: #4c5263;
+    letter-spacing: .3vh;
+}
+
+  
+
+.intro__undersuptitle{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    font-size: 65px;
+    color: #6D7B99;
+    letter-spacing: .3vh;
+}
+
+.intro_undertitle{
+    font-size: 15px;
+    font-weight: 500;
+    text-align: left;
+    padding: 10px 0 0;
+    color: #6D7B99;
+}
+
+/*Button*/
+.intro__button{
+    padding: 40px 0;
+}
+
+.button_intro{
+    font-size: 17px;
+    font-weight: 700;
+    font-family: 'Source Code Pro', monospace;
+    text-align: center;
+    text-decoration: none;
+    line-height: 45px;
+
+    color: #77A6F7;
+    border: 1px solid #77A6F7;
+    border-radius: 5px;
+    
+    width: 180px;
+    height: 50px;
+    display: block;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.button_intro::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #77A6F7;
+    top: 0;
+    left: -100%;
+    opacity: .1;
+    transition: .3s;
+}
+
+
+.button_intro:hover{
+    color: #77A6F7;
+}
+
+.button_intro:hover::before{
+    left: 0;
+}
+
+
+/*Slider*/
+.slider{
+    width: 100%;
+
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   z-index: 1;
+}
+
+.slider__item{
+    width: 23%;
+    border-top: 2px solid #77A6F7;
+    position: relative;
+    padding: 20px 0;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    color: #333;
+    text-transform: uppercase;
+
+}
+
+.slider__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.slider__text{
+    font-family: 'Source Code Pro', monospace;
+    color: #77A6F7;
+
+    
+}
+
+/*Header*/
+
+.header{
+    width: 100%;
+    padding-top: 30px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    transition: .5s;
+}
+
+.active{
+    width: 100%;
+    padding-top: 30px;
+
+    position: fixed;
+    top: -60px;
+    left: 0;
+    z-index: 1000;
+
+    transition: .5s;
+}
+
+.header__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo{
+    letter-spacing: .3vh;
+    font-size: 22px;
+    font-weight: 500;
+    color: #333;
+}
+
+.header__logo__color{
+    color: #77A6F7;
+}
+
+
+/*Section Link*/
+
+.section__link{
+    padding: 5px 0 0;
+    font-size: 13px;
+    margin: 20px 0 0;
+    color: #333;
+    text-decoration: none;
+
+    transition: color .2s linear;
+}
+
+
+.section__stydy{
+    list-style-type: none;
+    padding: 5px 0 0;
+}
+
+.section__stydy::before {
+    content: "▶ ";
+    color: #77A6F7;
+}
+
+/*Nav*/
+.nav{
+    font-size: 14px;
+}
+
+.nav__link{
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 10px;
+
+    color: #333;
+    text-decoration: none;
+
+    transition: color .2s linear;
+}
+
+.nav__link__first{
+    color: #77A6F7;
+}
+
+.nav__link:hover{
+    color: #77A6F7;
+}
+
+
+/*Section*/
+
+.section{
+    padding: 80px 0;
+
+    background: #fff;
+
+    transition: 1s;
+}
+
+.section__header{
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 40px;
+    
+    text-align: left;
+    
+}
+
+.section__title{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: left;
+
+    color: #333;
+    letter-spacing: .2vh;
+
+
+}
+
+.section__text{
+    font-size: 25px;
+    font-family: 'Source Code Pro', monospace;;
+    color: #77A6F7;
+}
+
+.section__suptitle{
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: left;
+    padding: 10px 0 0;
+    color: #6D7B99;
+}
+
+
+/*Working*/
+
+.working{
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto 20px;
+    
+    text-align: left;
+}
+
+.writing {
+    text-align: center;
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.writing__title {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1;
+    text-align: center;
+
+    color: #77A6F7;
+}
+
+.writing__suptitle{
+    text-align: center;
+
+    font-size: 60px;
+    padding: 15px 0;
+    font-weight: 700;
+    color: #4c5263;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.writing__undersuptitle{
+    text-align: center;
+
+    font-size: 16px;
+    font-weight: 500;
+    color: #6D7B99;
+}
+
+.footer__button{
+    font-size: 17px;
+    font-weight: 700;
+    font-family: 'Source Code Pro', monospace;
+    text-align: center;
+    text-decoration: none;
+    line-height: 45px;
+
+    color: #77A6F7;
+    border: 1px solid #77A6F7;
+    border-radius: 5px;
+    
+    width: 180px;
+    height: 50px;
+
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+
+    overflow: hidden;
+}
+
+.footer__button::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #77A6F7;
+    top: 0;
+    left: -100%;
+    opacity: .1;
+    transition: .3s;
+}
+
+
+.footer__button:hover{
+    color: #77A6F7;
+}
+
+.footer__button:hover::before{
+    left: 0;
+}
+
+
+
+/*Footer*/
+
+.footer{
+    text-align: center;
+}
+
+.networks__link{
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 5px;
+
+    font-size: 22px;
+    color: #6D7B99;
+    text-decoration: none;
+
+    transition: color .2s linear;
+}
+
+.networks__link:hover{
+    color: #77A6F7;
+}
+
+.footer__text{
+    padding: 10px 0;
+    font-size: 13px;
+    color: #6D7B99;
+}
+
+
+.fa-solid{
+    font-size: 16px;
+}
